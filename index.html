@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consistência no APP — Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --card-hover: #222636;
+    --border: #2a2d3a;
+    --text: #e4e6ef;
+    --text-secondary: #8b8fa8;
+    --red: #ea2845;
+    --red-bg: rgba(234,40,69,0.12);
+    --green: #00c853;
+    --green-bg: rgba(0,200,83,0.12);
+    --blue: #4d7cff;
+    --blue-bg: rgba(77,124,255,0.12);
+    --yellow: #ffb300;
+    --yellow-bg: rgba(255,179,0,0.12);
+    --purple: #9c5df0;
+    --purple-bg: rgba(156,93,240,0.12);
+    --orange: #ff6d3f;
+    --orange-bg: rgba(255,109,63,0.12);
+    --teal: #00bfa5;
+    --teal-bg: rgba(0,191,165,0.12);
+    --home: #ff6d3f;
+    --mercado: #4d7cff;
+    --farma: #00bfa5;
+    --radius: 14px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 32px;
+    line-height: 1.5;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ea2845, #ff6d3f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header-sub {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+  .header-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 0.78rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text-secondary);
+  }
+  .badge a { color: var(--blue); text-decoration: none; }
+  .badge a:hover { text-decoration: underline; }
+
+  /* KPI Cards */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+  .kpi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: transform .15s, border-color .15s;
+  }
+  .kpi-card:hover {
+    transform: translateY(-2px);
+    border-color: #3a3d4f;
+  }
+  .kpi-icon {
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+  }
+  .kpi-value {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+  .kpi-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .kpi-sub {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+  }
+  .icon-total { background: var(--blue-bg); color: var(--blue); }
+  .icon-open { background: var(--red-bg); color: var(--red); }
+  .icon-done { background: var(--green-bg); color: var(--green); }
+  .icon-rate { background: var(--yellow-bg); color: var(--yellow); }
+
+  /* Sections */
+  .section { margin-bottom: 40px; }
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    border-radius: 2px;
+    background: var(--red);
+  }
+
+  /* Charts Row */
+  .charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 768px) {
+    .charts-row { grid-template-columns: 1fr; }
+  }
+
+  /* Page Cards */
+  .page-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+  }
+  .page-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+  }
+  .page-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .page-card-name {
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .page-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .page-dot-home { background: var(--home); }
+  .page-dot-mercado { background: var(--blue); }
+  .page-dot-farma { background: var(--teal); }
+  .page-count {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .page-bar-bg {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 12px 0;
+  }
+  .page-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.6s ease;
+  }
+  .page-issues {
+    list-style: none;
+    margin-top: 12px;
+  }
+  .page-issues li {
+    font-size: 0.82rem;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .page-issues li:last-child { border-bottom: none; }
+  .issue-key {
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 0.78rem;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    min-width: 88px;
+  }
+  .issue-status {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .status-backlog { background: var(--yellow-bg); color: var(--yellow); }
+  .status-progress { background: var(--blue-bg); color: var(--blue); }
+  .status-done { background: var(--green-bg); color: var(--green); }
+
+  /* Type breakdown */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .type-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .type-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .type-value { font-size: 1.4rem; font-weight: 800; }
+  .type-label { font-size: 0.78rem; color: var(--text-secondary); }
+
+  /* Timeline */
+  .timeline {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .tl-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .tl-dot-created { background: var(--blue); }
+  .tl-date { font-size: 0.8rem; color: var(--text-secondary); min-width: 90px; }
+
+  /* Progress bar */
+  .progress-ring-wrap { display: flex; align-items: center; gap: 20px; }
+  .progress-ring {
+    width: 120px; height: 120px;
+    flex-shrink: 0;
+  }
+  .progress-ring text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    fill: var(--text);
+  }
+  .progress-details { font-size: 0.85rem; }
+  .progress-details span { display: block; margin-bottom: 4px; }
+
+  /* Footer */
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <h1>Consistência no APP</h1>
+      <p class="header-sub">Dashboard de inconsistências de UI/UX — Design Review via Figma</p>
+    </div>
+    <div class="header-meta">
+      <span class="badge">📅 18 Jun 2026</span>
+      <span class="badge">🏷️ 13 inconsistências ativas</span>
+      <span class="badge"><a href="https://ifood.atlassian.net/jira/software/c/projects/SWJORNEX/boards/25062" target="_blank">📋 Board Jira ↗</a></span>
+      <span class="badge"><a href="https://www.figma.com/design/Pc2Ukdhy1luhZvyLsiMyzu/Consist%C3%AAncia-no-APP" target="_blank">🎨 Figma ↗</a></span>
+    </div>
+  </div>
+
+  <!-- KPI CARDS -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-icon icon-total">📊</div>
+      <div class="kpi-value">13</div>
+      <div class="kpi-label">Inconsistências totais</div>
+      <div class="kpi-sub">em 3 páginas do app</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon icon-open">🔴</div>
+      <div class="kpi-value">13</div>
+      <div class="kpi-label">Pendentes (Backlog)</div>
+      <div class="kpi-sub">aguardando priorização</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon icon-done">✅</div>
+      <div class="kpi-value">0</div>
+      <div class="kpi-label">Resolvidas</div>
+      <div class="kpi-sub">0% de conclusão</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon icon-rate">🎯</div>
+      <div class="kpi-value">4.3</div>
+      <div class="kpi-label">Média por página</div>
+      <div class="kpi-sub">Farma lidera com 6</div>
+    </div>
+  </div>
+
+  <!-- PROGRESS + DISTRIBUTION -->
+  <div class="section">
+    <div class="section-title">Visão Geral</div>
+    <div class="charts-row">
+      <!-- Progress Ring -->
+      <div class="timeline">
+        <div class="progress-ring-wrap">
+          <svg class="progress-ring" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" fill="none" stroke="var(--border)" stroke-width="12"/>
+            <circle cx="60" cy="60" r="52" fill="none" stroke="var(--red)" stroke-width="12"
+              stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7"
+              transform="rotate(-90 60 60)" />
+            <text x="60" y="56" text-anchor="middle">0%</text>
+            <text x="60" y="74" text-anchor="middle" font-size="0.6rem" fill="#8b8fa8" font-weight="500">concluído</text>
+          </svg>
+          <div class="progress-details">
+            <span><strong>13</strong> abertas</span>
+            <span><strong>0</strong> em progresso</span>
+            <span><strong>0</strong> concluídas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Distribution by Page -->
+      <div class="page-cards" style="grid-template-columns: 1fr;">
+        <div class="page-card">
+          <div style="font-weight:700;font-size:0.95rem;margin-bottom:16px;">📂 Distribuição por Página</div>
+          
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-home"></span> Home</span>
+            <span class="page-count">4</span>
+          </div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:30.8%;background:var(--home);"></div></div>
+          
+          <div class="page-card-header" style="margin-top:18px;">
+            <span class="page-card-name"><span class="page-dot page-dot-mercado"></span> Mercado</span>
+            <span class="page-count">3</span>
+          </div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:23.1%;background:var(--blue);"></div></div>
+          
+          <div class="page-card-header" style="margin-top:18px;">
+            <span class="page-card-name"><span class="page-dot page-dot-farma"></span> Farma</span>
+            <span class="page-count">6</span>
+          </div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:46.2%;background:var(--teal);"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPE BREAKDOWN -->
+  <div class="section">
+    <div class="section-title">Tipos de Inconsistência</div>
+    <div class="type-grid">
+      <div class="type-card">
+        <div class="type-icon" style="background:var(--orange-bg);color:var(--orange);">↔️</div>
+        <div>
+          <div class="type-value">8</div>
+          <div class="type-label">Espaçamento / Padding</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-icon" style="background:var(--purple-bg);color:var(--purple);">🧩</div>
+        <div>
+          <div class="type-value">3</div>
+          <div class="type-label">Componente fora do padrão</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-icon" style="background:var(--teal-bg);color:var(--teal);">🔤</div>
+        <div>
+          <div class="type-value">1</div>
+          <div class="type-label">Tipografia / Alinhamento</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🎨</div>
+        <div>
+          <div class="type-value">1</div>
+          <div class="type-label">Ícones desatualizados</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DETAILED PAGE BREAKDOWN -->
+  <div class="section">
+    <div class="section-title">Detalhamento por Página</div>
+    <div class="page-cards">
+      
+      <!-- HOME -->
+      <div class="page-card">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-home"></span> 🏠 Home</span>
+          <span class="page-count">4</span>
+        </div>
+        <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:10px;">0/4 resolvidas</div>
+        <ul class="page-issues">
+          <li><span class="issue-key">SWJORNEX-3</span><span class="issue-status status-backlog">backlog</span> Espaçamento penúltimo componente vs ranking</li>
+          <li><span class="issue-key">SWJORNEX-4</span><span class="issue-status status-backlog">backlog</span> Tag turbo - espaçamento da chip</li>
+          <li><span class="issue-key">SWJORNEX-5</span><span class="issue-status status-backlog">backlog</span> Content With Image Tile Carrousel</li>
+          <li><span class="issue-key">SWJORNEX-6</span><span class="issue-status status-backlog">backlog</span> Hits indica - espaçamento (Android)</li>
+        </ul>
+      </div>
+
+      <!-- MERCADO -->
+      <div class="page-card">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-mercado"></span> 🛒 Mercado</span>
+          <span class="page-count">3</span>
+        </div>
+        <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:10px;">0/3 resolvidas</div>
+        <ul class="page-issues">
+          <li><span class="issue-key">SWJORNEX-7</span><span class="issue-status status-backlog">backlog</span> Ícones diferentes do novo padrão</li>
+          <li><span class="issue-key">SWJORNEX-8</span><span class="issue-status status-backlog">backlog</span> Espaçamento lojas vs Promoções</li>
+          <li><span class="issue-key">SWJORNEX-9</span><span class="issue-status status-backlog">backlog</span> Espaçamento entre promoções</li>
+        </ul>
+      </div>
+
+      <!-- FARMA -->
+      <div class="page-card">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-farma"></span> 💊 Farma</span>
+          <span class="page-count">6</span>
+        </div>
+        <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:10px;">0/6 resolvidas</div>
+        <ul class="page-issues">
+          <li><span class="issue-key">SWJORNEX-10</span><span class="issue-status status-backlog">backlog</span> In-App fora do padrão</li>
+          <li><span class="issue-key">SWJORNEX-11</span><span class="issue-status status-backlog">backlog</span> Espaçamento entre componentes (1)</li>
+          <li><span class="issue-key">SWJORNEX-12</span><span class="issue-status status-backlog">backlog</span> Uso de componente fora do padrão</li>
+          <li><span class="issue-key">SWJORNEX-13</span><span class="issue-status status-backlog">backlog</span> Uso de componente antigo</li>
+          <li><span class="issue-key">SWJORNEX-14</span><span class="issue-status status-backlog">backlog</span> Espaçamento entre componentes (2)</li>
+          <li><span class="issue-key">SWJORNEX-15</span><span class="issue-status status-backlog">backlog</span> Padding da tag inferior</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="section">
+    <div class="section-title">Linha do Tempo</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-dot tl-dot-created"></div>
+        <span class="tl-date">18 Jun 2026</span>
+        <span>Criação das <strong>13 tarefas</strong> de consistência no Jira (SWJORNEX-3 a SWJORNEX-15)</span>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot tl-dot-created"></div>
+        <span class="tl-date">18 Jun 2026</span>
+        <span>Design Review concluído — páginas analisadas: Home, Mercado, Farma, Catálogo, Busca</span>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot" style="background:var(--border);"></div>
+        <span class="tl-date" style="color:var(--text-secondary);">—</span>
+        <span style="color:var(--text-secondary);">Catálogo e Busca: sem inconsistências identificadas no Figma</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>Gerado por Hermes Agent • Dados do Figma + Jira (ifood.atlassian.net)</span>
+    <span>Projeto SWJORNEX • Board #25062</span>
+  </div>
+
+</div>
+
+</body>
+</html>
