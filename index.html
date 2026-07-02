@@ -55,6 +55,7 @@
   .issue-status { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: uppercase; }
   .status-backlog { background: var(--yellow-bg); color: var(--yellow); }
   .status-progress { background: var(--blue-bg); color: var(--blue); }
+  .status-codereview { background: var(--purple-bg); color: var(--purple); }
   .status-done { background: var(--green-bg); color: var(--green); }
   .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
   .type-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; display: flex; align-items: center; gap: 14px; }
@@ -77,10 +78,10 @@
   <div class="header">
     <div>
       <h1>Consistência no APP</h1>
-      <p class="header-sub">Dashboard de inconsistências de UI/UX — Design Review via Figma · Atualizado: 02 Jul 2026 16:09</p>
+      <p class="header-sub">Dashboard de inconsistências de UI/UX — Design Review via Figma · Atualizado: 02 Jul 2026 16:39</p>
     </div>
     <div class="header-meta">
-      <span class="badge">📅 Atualizado 02 Jul 2026 16:09</span>
+      <span class="badge">📅 Atualizado 02 Jul 2026 16:39</span>
       <span class="badge">28 inconsistências</span>
       <span class="badge">7 times</span>
       <span class="badge"><a href="https://ifood.atlassian.net/jira/software/c/projects/SWCONAP/boards/4479" target="_blank">📋 Board Jira ↗</a></span>
@@ -97,9 +98,15 @@
     </div>
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--red-bg);color:var(--red);">🔴</div>
-      <div class="kpi-value">28</div>
-      <div class="kpi-label">Pendentes</div>
+      <div class="kpi-value">25</div>
+      <div class="kpi-label">Backlog</div>
       <div class="kpi-sub">0 em progresso</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon" style="background:var(--purple-bg);color:var(--purple);">👁️</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-label">Em Code Review</div>
+      <div class="kpi-sub">aguardando aprovação</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--green-bg);color:var(--green);">✅</div>
@@ -125,7 +132,7 @@
           </div>
           <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:#4d7cff;"></div></div>
           <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:10px;">0/8 resolvidas</div>
-          <ul class="page-issues"><li><span class="issue-key">SWCONAP-4038</span><span class="issue-status status-backlog">To Do</span>[Subhome/Food] - Ícones de categorias despadronizados</li><li><span class="issue-key">SWCONAP-4040</span><span class="issue-status status-backlog">To Do</span>[Catalog Showcase] - [Item Detail] Icone de voltar e es</li><li><span class="issue-key">SWCONAP-4041</span><span class="issue-status status-backlog">To Do</span>[Catalog Showcase] - [Item Detail] Icone de clube e tag</li><li><span class="issue-key">SWCONAP-4042</span><span class="issue-status status-backlog">Code Review</span>[Catalog Showcase] - [Item Detail] Outline do botão e t</li><li><span class="issue-key">SWCONAP-4051</span><span class="issue-status status-backlog">To Do</span>[Subhome/Food] - Icone Filter All</li><li><span class="issue-key">SWCONAP-4052</span><span class="issue-status status-backlog">To Do</span>[Subhome/Food] - Espaçamento TP Premium maior que o pro</li><li><span class="issue-key">SWCONAP-4053</span><span class="issue-status status-backlog">To Do</span>[Catalog Showcase] - [Item Detail] Peso e cor dos títul</li><li><span class="issue-key">SWCONAP-4054</span><span class="issue-status status-backlog">Code Review</span>[Catalog Showcase] - [Item Detail] Arredondamento de im</li></ul>
+          <ul class="page-issues"><li><span class="issue-key">SWCONAP-4038</span><span class="issue-status status-backlog">To Do</span>[Subhome/Food] - Ícones de categorias despadronizados</li><li><span class="issue-key">SWCONAP-4040</span><span class="issue-status status-backlog">To Do</span>[Catalog Showcase] - [Item Detail] Icone de voltar e es</li><li><span class="issue-key">SWCONAP-4041</span><span class="issue-status status-codereview">Code Review</span>[Catalog Showcase] - [Item Detail] Icone de clube e tag</li><li><span class="issue-key">SWCONAP-4042</span><span class="issue-status status-codereview">Code Review</span>[Catalog Showcase] - [Item Detail] Outline do botão e t</li><li><span class="issue-key">SWCONAP-4051</span><span class="issue-status status-backlog">To Do</span>[Subhome/Food] - Icone Filter All</li><li><span class="issue-key">SWCONAP-4052</span><span class="issue-status status-backlog">To Do</span>[Subhome/Food] - Espaçamento TP Premium maior que o pro</li><li><span class="issue-key">SWCONAP-4053</span><span class="issue-status status-backlog">To Do</span>[Catalog Showcase] - [Item Detail] Peso e cor dos títul</li><li><span class="issue-key">SWCONAP-4054</span><span class="issue-status status-codereview">Code Review</span>[Catalog Showcase] - [Item Detail] Arredondamento de im</li></ul>
         </div>
         <div class="page-card">
           <div class="page-card-header">
@@ -239,6 +246,7 @@
           </svg>
           <div class="progress-details" style="font-size:0.85rem;">
             <span><strong>28</strong> abertas</span>
+            <span><strong>3</strong> em code review</span>
             <span><strong>0</strong> em progresso</span>
             <span><strong>0</strong> concluídas</span>
           </div>
