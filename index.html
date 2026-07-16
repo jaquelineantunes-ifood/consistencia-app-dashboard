@@ -28,13 +28,13 @@
   .header-meta { display: flex; gap: 12px; flex-wrap: wrap; }
   .badge { font-size: 0.78rem; padding: 6px 14px; border-radius: 20px; font-weight: 600; border: 1px solid var(--border); background: var(--card); color: var(--text-secondary); }
   .badge a { color: var(--blue); text-decoration: none; }
-  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-bottom: 40px; }
-  .kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: transform .15s; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; margin-bottom: 40px; }
+  .kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; transition: transform .15s; }
   .kpi-card:hover { transform: translateY(-2px); border-color: #3a3d4f; }
-  .kpi-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 14px; }
-  .kpi-value { font-size: 2.4rem; font-weight: 800; letter-spacing: -1px; line-height: 1; }
-  .kpi-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px; font-weight: 500; }
-  .kpi-sub { font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px; }
+  .kpi-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 12px; }
+  .kpi-value { font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+  .kpi-label { font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px; font-weight: 500; }
+  .kpi-sub { font-size: 0.75rem; color: var(--text-secondary); margin-top: 3px; }
   .section { margin-bottom: 40px; }
   .section-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
   .section-title::before { content: ''; width: 4px; height: 20px; border-radius: 2px; background: var(--red); }
@@ -52,10 +52,11 @@
   .page-issues li { font-size: 0.82rem; padding: 7px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
   .page-issues li:last-child { border-bottom: none; }
   .issue-key { font-weight: 600; color: var(--blue); font-size: 0.78rem; font-family: 'SF Mono', monospace; min-width: 88px; }
-  .issue-status { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: uppercase; }
+  .issue-status { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: uppercase; white-space: nowrap; }
   .status-backlog { background: var(--yellow-bg); color: var(--yellow); }
   .status-progress { background: var(--blue-bg); color: var(--blue); }
   .status-codereview { background: var(--purple-bg); color: var(--purple); }
+  .status-readyfordev { background: var(--orange-bg); color: var(--orange); }
   .status-done { background: var(--green-bg); color: var(--green); }
   .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
   .type-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; display: flex; align-items: center; gap: 14px; }
@@ -64,6 +65,7 @@
   .type-label { font-size: 0.78rem; color: var(--text-secondary); }
   .timeline { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; }
   .progress-ring-wrap { display: flex; align-items: center; gap: 20px; }
+  .progress-details span { display: block; margin-bottom: 4px; }
   .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-secondary); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   @media (max-width: 768px) { .charts-row { grid-template-columns: 1fr; } }
 </style>
@@ -73,11 +75,11 @@
   <div class="header">
     <div>
       <h1>Consistência no APP</h1>
-      <p class="header-sub">Dashboard de inconsistências de UI/UX — Design Review via Figma · Atualizado: 16 Jul 2026 10:18</p>
+      <p class="header-sub">Dashboard de inconsistências de UI/UX — Design Review via Figma · Atualizado: 16 Jul 2026 14:47</p>
     </div>
     <div class="header-meta">
-      <span class="badge">📅 Atualizado 16 Jul 2026 10:18</span>
-      <span class="badge">57 inconsistências</span>
+      <span class="badge">📅 Atualizado 16 Jul 2026 14:47</span>
+      <span class="badge">58 inconsistências</span>
       <span class="badge">11 times</span>
       <span class="badge"><a href="https://ifood.atlassian.net/jira/software/c/projects/SWCONAP/boards/4479" target="_blank">📋 Board Jira ↗</a></span>
       <span class="badge"><a href="https://www.figma.com/design/Pc2Ukdhy1luhZvyLsiMyzu/Consist%C3%AAncia-no-APP" target="_blank">🎨 Figma ↗</a></span>
@@ -87,7 +89,7 @@
   <div class="kpi-grid">
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--blue-bg);color:var(--blue);">📊</div>
-      <div class="kpi-value">57</div>
+      <div class="kpi-value">58</div>
       <div class="kpi-label">Inconsistências totais</div>
       <div class="kpi-sub">em 11 times do app</div>
     </div>
@@ -95,23 +97,29 @@
       <div class="kpi-icon" style="background:var(--red-bg);color:var(--red);">🔴</div>
       <div class="kpi-value">43</div>
       <div class="kpi-label">Backlog</div>
-      <div class="kpi-sub">2 em progresso</div>
+      <div class="kpi-sub">1 em progresso</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--purple-bg);color:var(--purple);">👁️</div>
-      <div class="kpi-value">7</div>
-      <div class="kpi-label">Em Code Review</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-label">Code Review</div>
       <div class="kpi-sub">aguardando aprovação</div>
     </div>
     <div class="kpi-card">
-      <div class="kpi-icon" style="background:var(--green-bg);color:var(--green);">✅</div>
+      <div class="kpi-icon" style="background:var(--orange-bg);color:var(--orange);">🚀</div>
       <div class="kpi-value">5</div>
+      <div class="kpi-label">Ready for Dev</div>
+      <div class="kpi-sub">pronto para desenvolver</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon" style="background:var(--green-bg);color:var(--green);">✅</div>
+      <div class="kpi-value">6</div>
       <div class="kpi-label">Resolvidas</div>
-      <div class="kpi-sub">9% de conclusão</div>
+      <div class="kpi-sub">10% de conclusão</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--yellow-bg);color:var(--yellow);">🎯</div>
-      <div class="kpi-value">46/44</div>
+      <div class="kpi-value">47/45</div>
       <div class="kpi-label">iOS / Android</div>
       <div class="kpi-sub">cards por plataforma</div>
     </div>
@@ -122,11 +130,29 @@
     <div class="page-cards">
       <div class="page-card">
       <div class="page-card-header">
+        <span class="page-card-name"><span class="page-dot page-dot-home"></span>🏠 Home</span>
+        <span class="page-count">10</span>
+      </div>
+      <div style="font-size:0.8rem;color:var(--text-secondary);">1/10 resolvidas</div>
+      <div class="page-bar-bg"><div class="page-bar-fill" style="width:10%;background:var(--green);"></div></div>
+      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4188</span><span class="issue-status status-backlog">TO DO</span>3. [Home] Espaçamento entre componente de hits e farma</li>
+<li><span class="issue-key">SWCONAP-4157</span><span class="issue-status status-backlog">TO DO</span>[Home] 6. Últimas lojas com título inconsistente - Home Pós Pedido</li>
+<li><span class="issue-key">SWCONAP-4141</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 8. Título melhores lojas com tamanho errado</li>
+<li><span class="issue-key">SWCONAP-4140</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 7. Título últimas lojas com tamanho errado</li>
+<li><span class="issue-key">SWCONAP-4139</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 4. Espaçamento small banner maior que o esperado</li>
+<li><span class="issue-key">SWCONAP-4138</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 3. Espaçamento do banner errado</li>
+<li><span class="issue-key">SWCONAP-4137</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 6. Título componente de itens com tamanho errado</li>
+<li><span class="issue-key">SWCONAP-4112</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Mercado] 6. Ajuste de tags componente de mercado</li>
+<li><span class="issue-key">SWCONAP-4111</span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 3. Espaçamento entre componentes de promoção</li>
+<li><span class="issue-key">SWCONAP-4016</span><span class="issue-status status-codereview">CODE REVIEW</span>[Home] - Espaçamento penúltimo componente &lt;&gt; ranking + Tag turbo</li>
+</ul>
+    </div><div class="page-card">
+      <div class="page-card-header">
         <span class="page-card-name"><span class="page-dot page-dot-farma"></span>💊 Farmácia</span>
         <span class="page-count">10</span>
       </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/10 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
+      <div style="font-size:0.8rem;color:var(--text-secondary);">1/10 resolvidas</div>
+      <div class="page-bar-bg"><div class="page-bar-fill" style="width:10%;background:var(--green);"></div></div>
       <ul class="page-issues"><li><span class="issue-key">SWCONAP-4155</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] 2. Searchbar em farmacia inconsistente</li>
 <li><span class="issue-key">SWCONAP-4154</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] 1. Top bar da página de farmacia com icones errados</li>
 <li><span class="issue-key">SWCONAP-4153</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li>
@@ -136,24 +162,7 @@
 <li><span class="issue-key">SWCONAP-4032</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Padding da tag inferior fora do padrão</li>
 <li><span class="issue-key">SWCONAP-4031</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Espaçamento entre componentes fora do padrão</li>
 <li><span class="issue-key">SWCONAP-4030</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - In-App fora do padrão</li>
-<li><span class="issue-key">SWCONAP-4025</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Content With Image Tile Carrousel</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>🏠 Home</span>
-        <span class="page-count">9</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">1/9 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:11%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4157</span><span class="issue-status status-backlog">TO DO</span>[Home] 6. Últimas lojas com título inconsistente - Home Pós Pedido</li>
-<li><span class="issue-key">SWCONAP-4141</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 8. Título melhores lojas com tamanho errado</li>
-<li><span class="issue-key">SWCONAP-4140</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 7. Título últimas lojas com tamanho errado</li>
-<li><span class="issue-key">SWCONAP-4139</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 4. Espaçamento small banner maior que o esperado</li>
-<li><span class="issue-key">SWCONAP-4138</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 3. Espaçamento do banner errado</li>
-<li><span class="issue-key">SWCONAP-4137</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 6. Título componente de itens com tamanho errado</li>
-<li><span class="issue-key">SWCONAP-4112</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Mercado] 6. Ajuste de tags componente de mercado</li>
-<li><span class="issue-key">SWCONAP-4111</span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 3. Espaçamento entre componentes de promoção</li>
-<li><span class="issue-key">SWCONAP-4016</span><span class="issue-status status-progress">IN PROGRESS</span>[Home] - Espaçamento penúltimo componente &lt;&gt; ranking + Tag turbo</li>
+<li><span class="issue-key">SWCONAP-4025</span><span class="issue-status status-done">DONE</span>[Farmácia] - Content With Image Tile Carrousel</li>
 </ul>
     </div><div class="page-card">
       <div class="page-card-header">
@@ -178,11 +187,11 @@
       <div style="font-size:0.8rem;color:var(--text-secondary);">0/7 resolvidas</div>
       <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
       <ul class="page-issues"><li><span class="issue-key">SWCONAP-4129</span><span class="issue-status status-backlog">TO DO</span>[Página do mercado] 6. Linguetas de desconto com espaçamento inconsistente</li>
-<li><span class="issue-key">SWCONAP-4054</span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Arredondamento de imagem e botão</li>
+<li><span class="issue-key">SWCONAP-4054</span><span class="issue-status status-readyfordev">READY FOR DEV</span>[Catalog Showcase] - [Item Detail] Arredondamento de imagem e botão</li>
 <li><span class="issue-key">SWCONAP-4053</span><span class="issue-status status-backlog">TO DO</span>[Catalog Showcase] - [Item Detail] Peso e cor dos títulos</li>
-<li><span class="issue-key">SWCONAP-4042</span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Outline do botão e tamanho de fonte</li>
-<li><span class="issue-key">SWCONAP-4041</span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Icone de clube e tag</li>
-<li><span class="issue-key">SWCONAP-4040</span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Icone de voltar e espaçamento</li>
+<li><span class="issue-key">SWCONAP-4042</span><span class="issue-status status-readyfordev">READY FOR DEV</span>[Catalog Showcase] - [Item Detail] Outline do botão e tamanho de fonte</li>
+<li><span class="issue-key">SWCONAP-4041</span><span class="issue-status status-readyfordev">READY FOR DEV</span>[Catalog Showcase] - [Item Detail] Icone de clube e tag</li>
+<li><span class="issue-key">SWCONAP-4040</span><span class="issue-status status-readyfordev">READY FOR DEV</span>[Catalog Showcase] - [Item Detail] Icone de voltar e espaçamento</li>
 <li><span class="issue-key">SWCONAP-4039</span><span class="issue-status status-backlog">TO DO</span>[Catalog Showcase] - [Catálogo] Títulos fora do padrão</li>
 </ul>
     </div><div class="page-card">
@@ -208,7 +217,7 @@
       <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
       <ul class="page-issues"><li><span class="issue-key">SWCONAP-4152</span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 6. Confirmar status do componente quando tem só 1 merchant</li>
 <li><span class="issue-key">SWCONAP-4151</span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 4. Título inconsistente mais aclamados no Gourmet</li>
-<li><span class="issue-key">SWCONAP-4147</span><span class="issue-status status-codereview">CODE REVIEW</span>[Gourmet] 3. Ajuste espaçamento componente de avaliação da pagina</li>
+<li><span class="issue-key">SWCONAP-4147</span><span class="issue-status status-readyfordev">READY FOR DEV</span>[Gourmet] 3. Ajuste espaçamento componente de avaliação da pagina</li>
 <li><span class="issue-key">SWCONAP-4146</span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 2. Títulos de sessão carrossel dos chefs inconsistentes</li>
 <li><span class="issue-key">SWCONAP-4145</span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 1. Cores botões top bar inconsistentes</li>
 </ul>
@@ -272,7 +281,7 @@
   <div class="section">
     <div class="section-title">Tipos de Inconsistência</div>
     <div class="type-grid">
-      <div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">↔️</div><div><div class="type-value">23</div><div class="type-label">Espaçamento / Padding</div></div></div>
+      <div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">↔️</div><div><div class="type-value">24</div><div class="type-label">Espaçamento / Padding</div></div></div>
 <div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔤</div><div><div class="type-value">12</div><div class="type-label">Tipografia / Cor / Peso</div></div></div>
 <div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🎨</div><div><div class="type-value">6</div><div class="type-label">Ícones</div></div></div>
 <div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔘</div><div><div class="type-value">4</div><div class="type-label">Botão / CTA</div></div></div>
@@ -293,16 +302,17 @@
           <svg class="progress-ring" viewBox="0 0 120 120">
             <circle cx="60" cy="60" r="52" fill="none" stroke="var(--border)" stroke-width="12"/>
             <circle cx="60" cy="60" r="52" fill="none" stroke="#ea2845" stroke-width="12"
-              stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="297.3"
+              stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="294.1"
               transform="rotate(-90 60 60)" />
-            <text x="60" y="56" text-anchor="middle">9%</text>
+            <text x="60" y="56" text-anchor="middle">10%</text>
             <text x="60" y="74" text-anchor="middle" font-size="0.6rem" fill="#8b8fa8" font-weight="500">concluído</text>
           </svg>
           <div class="progress-details" style="font-size:0.85rem;">
-            <span><strong>57</strong> abertas</span>
-            <span><strong>7</strong> em code review</span>
-            <span><strong>2</strong> em progresso</span>
-            <span><strong>5</strong> concluídas</span>
+            <span><strong>58</strong> abertas</span>
+            <span><strong>3</strong> em code review</span>
+            <span><strong>5</strong> ready for dev</span>
+            <span><strong>1</strong> em progresso</span>
+            <span><strong>6</strong> concluídas</span>
           </div>
         </div>
       </div>
