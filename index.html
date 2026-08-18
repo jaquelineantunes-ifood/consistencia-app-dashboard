@@ -52,6 +52,11 @@
   .page-issues li { font-size: 0.82rem; padding: 7px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
   .page-issues li:last-child { border-bottom: none; }
   .issue-key { font-weight: 600; color: var(--blue); font-size: 0.78rem; font-family: 'SF Mono', monospace; min-width: 88px; }
+  .issue-key a { color: var(--blue); text-decoration: none; }
+  .issue-key a:hover { text-decoration: underline; }
+  #mb1-priorizacao { background: var(--card); border: 2px solid var(--red); border-radius: var(--radius); padding: 28px 28px 20px; margin-bottom: 40px; }
+  #mb1-priorizacao .section-title { color: var(--red); }
+  #mb1-priorizacao .page-card { border-left: 3px solid var(--border); }
   .issue-status { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: uppercase; }
   .status-backlog { background: var(--yellow-bg); color: var(--yellow); }
   .status-progress { background: var(--blue-bg); color: var(--blue); }
@@ -116,6 +121,119 @@
       <div class="kpi-sub">cards por plataforma</div>
     </div>
   </div>
+
+  <!-- ===== MB1 PRIORIZAÇÃO — NÃO REMOVER ESTA SEÇÃO (MANUAL) ===== -->
+  <div class="section" id="mb1-priorizacao">
+    <div class="section-title">🎯 Tickets Priorizados — MB1</div>
+    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:20px;">Tickets selecionados para entrega na MB1, organizados por time responsável. <strong style="color:var(--text);">38 tickets · 6 times</strong></p>
+
+    <div class="page-cards">
+      <!-- Catalog Showcase/Gourmet/Food Delivery — @souza.aline -->
+      <div class="page-card" style="border-left-color:var(--orange);">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-home"></span>🛍️ Catalog Showcase / Gourmet / Food Delivery</span>
+          <span class="page-count">15</span>
+        </div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:8px;">EM: @souza.aline</div>
+        <ul class="page-issues">
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4038" target="_blank">SWCONAP-4038</a></span>[Subhome/Food] Ícones de categorias despadronizados</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4039" target="_blank">SWCONAP-4039</a></span>[Catalog] Títulos fora do padrão (14px regular → 14px medium)</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4040" target="_blank">SWCONAP-4040</a></span>[Item Detail] Ícone de voltar e espaçamento</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4041" target="_blank">SWCONAP-4041</a></span>[Item Detail] Ícone de clube e tag desalinhados</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4042" target="_blank">SWCONAP-4042</a></span>[Item Detail] Outline do botão e tamanho de fonte</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4051" target="_blank">SWCONAP-4051</a></span>[Subhome/Food] Gerar ícones 3D no novo estilo</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4052" target="_blank">SWCONAP-4052</a></span>[Subhome/Food] Espaçamento TP Premium maior que o projetado</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4053" target="_blank">SWCONAP-4053</a></span>[Item Detail] Peso e cor dos títulos</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4054" target="_blank">SWCONAP-4054</a></span>[Item Detail] Arredondamento de imagem e botão</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4129" target="_blank">SWCONAP-4129</a></span>[Página do mercado] Linguetas de desconto</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4145" target="_blank">SWCONAP-4145</a></span>[Gourmet] 1. Cores botões top bar inconsistentes</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4146" target="_blank">SWCONAP-4146</a></span>[Gourmet] 2. Títulos de sessão carrossel dos chefs</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4147" target="_blank">SWCONAP-4147</a></span>[Gourmet] 3. Espaçamento componente de avaliação</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4151" target="_blank">SWCONAP-4151</a></span>[Gourmet] 4. Título "Mais aclamados" inconsistente</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4152" target="_blank">SWCONAP-4152</a></span>[Gourmet] 6. Componente com só 1 merchant</li>
+        </ul>
+      </div>
+
+      <!-- Farmácia — @henrique.galo / @deborah.parucci -->
+      <div class="page-card" style="border-left-color:var(--teal);">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-farma"></span>💊 Farmácia</span>
+          <span class="page-count">15</span>
+        </div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:8px;">EM: @henrique.galo · PM: @deborah.parucci</div>
+        <ul class="page-issues">
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4025" target="_blank">SWCONAP-4025</a></span>[Farmácia] Content With Image Tile Carrousel</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4030" target="_blank">SWCONAP-4030</a></span>[Farmácia] In-App fora do padrão</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4031" target="_blank">SWCONAP-4031</a></span>[Farmácia] Espaçamento entre componentes</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4032" target="_blank">SWCONAP-4032</a></span>[Farmácia] Padding da tag inferior</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4033" target="_blank">SWCONAP-4033</a></span>[Farmácia] Uso de componente fora do padrão</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4034" target="_blank">SWCONAP-4034</a></span>[Farmácia] Uso de componente antigo</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4049" target="_blank">SWCONAP-4049</a></span>[Farmácia] Espaçamento entre componentes</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4153" target="_blank">SWCONAP-4153</a></span>[Farmácia] Espaçamento entre banners e arredondamento</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4154" target="_blank">SWCONAP-4154</a></span>[Farmácia] 1. Top bar com ícones errados</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4155" target="_blank">SWCONAP-4155</a></span>[Farmácia] 2. Searchbar inconsistente</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4190" target="_blank">SWCONAP-4190</a></span>[Mercado] 5. Recomendação de farmácias (Home Pós Pedido)</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4211" target="_blank">SWCONAP-4211</a></span>[Farmácia] Trocar corner radius banners → 16px</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4212" target="_blank">SWCONAP-4212</a></span>[Farmácia] Trocar espaçamento banners → 32px</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4217" target="_blank">SWCONAP-4217</a></span>[Farmácia] Hits - Espaçamentos → ajustar 16px</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4218" target="_blank">SWCONAP-4218</a></span>[Farmácia] Hits - Espaçamentos → ajustar 32px</li>
+        </ul>
+      </div>
+
+      <!-- Hits — @miguel.pimentel -->
+      <div class="page-card" style="border-left-color:var(--blue);">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-mercado"></span>🔥 Hits</span>
+          <span class="page-count">1</span>
+        </div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:8px;">EM: @miguel.pimentel</div>
+        <ul class="page-issues">
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4048" target="_blank">SWCONAP-4048</a></span>[Hits] Hits indica - Espaçamento superior (Android)</li>
+        </ul>
+      </div>
+
+      <!-- Home de Bebidas — @natalia.ruiz -->
+      <div class="page-card" style="border-left-color:var(--purple);">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-mercado"></span>🍺 Home de Bebidas</span>
+          <span class="page-count">5</span>
+        </div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:8px;">EM: @natalia.ruiz</div>
+        <ul class="page-issues">
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4035" target="_blank">SWCONAP-4035</a></span>[Bebidas] Espaçamento fora do padrão</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4036" target="_blank">SWCONAP-4036</a></span>[Bebidas] Espaçamento interno fora do padrão</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4037" target="_blank">SWCONAP-4037</a></span>[Bebidas] Espaçamento entre subcategorias</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4050" target="_blank">SWCONAP-4050</a></span>[Bebidas] Announcements fora de posição</li>
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4213" target="_blank">SWCONAP-4213</a></span>[Home Pet] Sub Home / Petshop — ilustrações fora do padrão</li>
+        </ul>
+      </div>
+
+      <!-- Martech — @albert.souza -->
+      <div class="page-card" style="border-left-color:var(--yellow);">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-home"></span>📣 Martech</span>
+          <span class="page-count">1</span>
+        </div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:8px;">EM: @albert.souza</div>
+        <ul class="page-issues">
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4209" target="_blank">SWCONAP-4209</a></span>[Home] [Notifications] Espaçamento entre cards</li>
+        </ul>
+      </div>
+
+      <!-- Groceries Checkout — @felipe.leite -->
+      <div class="page-card" style="border-left-color:var(--green);">
+        <div class="page-card-header">
+          <span class="page-card-name"><span class="page-dot page-dot-home"></span>🛒 Groceries Checkout</span>
+          <span class="page-count">1</span>
+        </div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:8px;">EM: @felipe.leite</div>
+        <ul class="page-issues">
+          <li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4043" target="_blank">SWCONAP-4043</a></span>[Checkout] Botão de voltar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ===== FIM MB1 PRIORIZAÇÃO ===== -->
 
   <div class="section">
     <div class="section-title">Inconsistências por Time</div>
