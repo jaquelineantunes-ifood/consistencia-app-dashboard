@@ -44,7 +44,7 @@
   .page-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
   .page-card-name { font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 8px; }
   .page-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-  .page-dot-home { background: var(--home); } .page-dot-mercado { background: var(--blue); } .page-dot-farma { background: var(--teal); }
+  .page-dot-home { background: var(--home); } .page-dot-mercado { background: var(--mercado); } .page-dot-farma { background: var(--farma); }
   .page-count { font-size: 1.8rem; font-weight: 800; }
   .page-bar-bg { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin: 12px 0; }
   .page-bar-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
@@ -78,12 +78,12 @@
   <div class="header">
     <div>
       <h1>Consistência no APP</h1>
-      <p class="header-sub">Dashboard de inconsistências de UI/UX — Design Review via Figma · Atualizado: 26 Aug 2026 11:04</p>
+      <p class="header-sub">Dashboard de inconsistências de UI/UX — Design Review via Figma · Atualizado: 27 Aug 2026 10:36</p>
     </div>
     <div class="header-meta">
-      <span class="badge">📅 Atualizado 26 Aug 2026 11:04</span>
+      <span class="badge">📅 Atualizado 27 Aug 2026 10:36</span>
       <span class="badge">73 inconsistências</span>
-      <span class="badge">11 times</span>
+      <span class="badge">13 times</span>
       <span class="badge"><a href="https://ifood.atlassian.net/jira/software/c/projects/SWCONAP/boards/4479" target="_blank">📋 Board Jira ↗</a></span>
       <span class="badge"><a href="https://www.figma.com/design/Pc2Ukdhy1luhZvyLsiMyzu/Consist%C3%AAncia-no-APP" target="_blank">🎨 Figma ↗</a></span>
     </div>
@@ -94,7 +94,7 @@
       <div class="kpi-icon" style="background:var(--blue-bg);color:var(--blue);">📊</div>
       <div class="kpi-value">73</div>
       <div class="kpi-label">Inconsistências totais</div>
-      <div class="kpi-sub">em 11 times do app</div>
+      <div class="kpi-sub">em 13 times do app</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--red-bg);color:var(--red);">🔴</div>
@@ -104,15 +104,15 @@
     </div>
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--purple-bg);color:var(--purple);">👁️</div>
-      <div class="kpi-value">7</div>
+      <div class="kpi-value">5</div>
       <div class="kpi-label">Em Code Review</div>
       <div class="kpi-sub">aguardando aprovação</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--green-bg);color:var(--green);">✅</div>
-      <div class="kpi-value">28</div>
+      <div class="kpi-value">30</div>
       <div class="kpi-label">Resolvidas</div>
-      <div class="kpi-sub">38% de conclusão</div>
+      <div class="kpi-sub">41% de conclusão</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-icon" style="background:var(--yellow-bg);color:var(--yellow);">🎯</div>
@@ -182,284 +182,169 @@
     <div class="section-title">Inconsistências por Time</div>
     <div class="page-cards">
       <div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>🏠 Home</span>
-        <span class="page-count">18</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">5/18 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:28%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4213</span><span class="issue-status status-backlog">TO DO</span>[Home Pet] Sub Home / Petshop</li>
-<li><span class="issue-key">SWCONAP-4210</span><span class="issue-status status-done">DONE</span>[Home de Mercado] Arredondamento das imagens de item iconsistente</li>
-<li><span class="issue-key">SWCONAP-4209</span><span class="issue-status status-backlog">TO DO</span>[Home] [Notifications] Espaçamento entre cards inconsistente e/ou com bug</li>
-<li><span class="issue-key">SWCONAP-4208</span><span class="issue-status status-progress">IN PROGRESS</span>[Home] [Tabbed Ranking Carousel] Falta de borda no logo do merchant</li>
-<li><span class="issue-key">SWCONAP-4191</span><span class="issue-status status-backlog">TO DO</span>[Home] 6. [Home Pós Pedido] Últimas lojas com título inconsistente</li>
-<li><span class="issue-key">SWCONAP-4190</span><span class="issue-status status-backlog">TO DO</span>[Mercado] 5. [Home Pós Pedido] Títulos inconsistentes recomendação de farmácias</li>
-<li><span class="issue-key">SWCONAP-4189</span><span class="issue-status status-done">DONE</span>[Home] 3. Espaçamento entre componente de hits e farma</li>
-<li><span class="issue-key">SWCONAP-4188</span><span class="issue-status status-codereview">CODE REVIEW</span>3. [Home] Espaçamento entre componente de hits e farma</li>
-<li><span class="issue-key">SWCONAP-4157</span><span class="issue-status status-backlog">TO DO</span>6.  [Home Pós Pedido] Ultimas lojas com título inconsistente</li>
-<li><span class="issue-key">SWCONAP-4141</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 8. Título melhores lojas com tamanho errado</li>
-<li><span class="issue-key">SWCONAP-4140</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 7. Título últimas lojas com tamanho errado</li>
-<li><span class="issue-key">SWCONAP-4139</span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 4. Espaçamento small banner maior que o esperado</li>
-<li><span class="issue-key">SWCONAP-4138</span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 3. Espaçamento do banner errado</li>
-<li><span class="issue-key">SWCONAP-4137</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Food] 6. Título componente de itens com tamanho errado</li>
-<li><span class="issue-key">SWCONAP-4112</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Mercado] 6. Ajuste de tags componente de mercado</li>
-<li><span class="issue-key">SWCONAP-4111</span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 3. Espaçamento entre componentes de promoção</li>
-<li><span class="issue-key">SWCONAP-4110</span><span class="issue-status status-backlog">TO DO</span>[Sub Home / Mercado] 7. Whitespace de mercado</li>
-<li><span class="issue-key">SWCONAP-4016</span><span class="issue-status status-codereview">CODE REVIEW</span>[Home] - Espaçamento penúltimo componente <> ranking + Tag turbo</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-farma"></span>💊 Farmácia</span>
-        <span class="page-count">13</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">1/13 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:8%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4218</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Hits - Espaçamentos inconsistentes</li>
-<li><span class="issue-key">SWCONAP-4217</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Hits - Espaçamentos inconsistentes</li>
-<li><span class="issue-key">SWCONAP-4212</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li>
-<li><span class="issue-key">SWCONAP-4211</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li>
-<li><span class="issue-key">SWCONAP-4155</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] 2. Searchbar em farmacia inconsistente</li>
-<li><span class="issue-key">SWCONAP-4154</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] 1. Top bar da página de farmacia com icones errados</li>
-<li><span class="issue-key">SWCONAP-4153</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li>
-<li><span class="issue-key">SWCONAP-4049</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Espaçamento entre componentes fora do padrão</li>
-<li><span class="issue-key">SWCONAP-4034</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Uso de componente antigo</li>
-<li><span class="issue-key">SWCONAP-4033</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Uso de componente fora do padrão</li>
-<li><span class="issue-key">SWCONAP-4032</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Padding da tag inferior fora do padrão</li>
-<li><span class="issue-key">SWCONAP-4031</span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Espaçamento entre componentes fora do padrão</li>
-<li><span class="issue-key">SWCONAP-4025</span><span class="issue-status status-done">DONE</span>[Farmácia] - Content With Image Tile Carrousel</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-mercado"></span>🛍️ Home de Mercado</span>
-        <span class="page-count">8</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">7/8 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:88%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4194</span><span class="issue-status status-codereview">CODE REVIEW</span>[Android][Página do mercado] 2. TabBar em mercado inconsistente</li>
-<li><span class="issue-key">SWCONAP-4150</span><span class="issue-status status-done">DONE</span>[Android][Página do mercado] 2. Searchbar em mercado inconsistente</li>
-<li><span class="issue-key">SWCONAP-4149</span><span class="issue-status status-done">DONE</span>[Android] [Página do mercado] 1. Top bar da página de mercado com icones errados</li>
-<li><span class="issue-key">SWCONAP-4128</span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 5. Espaçamento doces e sobremesas pg do mercado maior que o projetado</li>
-<li><span class="issue-key">SWCONAP-4127</span><span class="issue-status status-done">DONE</span>[Backend][Página do mercado] 4. Espaçamento peça de novo pg do mercado maior que o projetado</li>
-<li><span class="issue-key">SWCONAP-4126</span><span class="issue-status status-done">DONE</span>[Android][Página do mercado] 3. Espaçamento categorias pg do mercado maior que o projetado</li>
-<li><span class="issue-key">SWCONAP-4125</span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 2. Searchbar em mercado inconsistente</li>
-<li><span class="issue-key">SWCONAP-4124</span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 1. Top bar da página de mercado com icones errados</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-farma"></span>📋 Catalog Showcase</span>
-        <span class="page-count">7</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/7 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4129</span><span class="issue-status status-backlog">TO DO</span>[Página do mercado] 6. Linguetas de desconto com espaçamento inconsistente</li>
-<li><span class="issue-key">SWCONAP-4054</span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Arredondamento de imagem e botão</li>
-<li><span class="issue-key">SWCONAP-4053</span><span class="issue-status status-backlog">TO DO</span>[Catalog Showcase] - [Item Detail] Peso e cor dos títulos</li>
-<li><span class="issue-key">SWCONAP-4042</span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Outline do botão e tamanho de fonte</li>
-<li><span class="issue-key">SWCONAP-4041</span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Icone de clube e tag</li>
-<li><span class="issue-key">SWCONAP-4040</span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Icone de voltar e espaçamento</li>
-<li><span class="issue-key">SWCONAP-4039</span><span class="issue-status status-backlog">TO DO</span>[Catalog Showcase] - [Catálogo] Títulos fora do padrão</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>🛒 Groceries Checkout</span>
-        <span class="page-count">6</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">1/6 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:17%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4055</span><span class="issue-status status-backlog">TO DO</span>[Checkout] Plugin Itens - ajustar para botão secundário</li>
-<li><span class="issue-key">SWCONAP-4047</span><span class="issue-status status-backlog">TO DO</span>[Checkout] - Espaçamento maior que o projetado</li>
-<li><span class="issue-key">SWCONAP-4046</span><span class="issue-status status-backlog">TO DO</span>[Checkout] Arredondamento das imagens - cross sell</li>
-<li><span class="issue-key">SWCONAP-4045</span><span class="issue-status status-backlog">TO DO</span>[Checkout] - Ajustar arredondamento lista de DMs</li>
-<li><span class="issue-key">SWCONAP-4044</span><span class="issue-status status-done">DONE</span>[Checkout] - Botão de voltar</li>
-<li><span class="issue-key">SWCONAP-4043</span><span class="issue-status status-backlog">TO DO</span>[Checkout] - Botão de voltar</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-farma"></span>🍽️ Gourmet</span>
-        <span class="page-count">5</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">2/5 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:40%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4152</span><span class="issue-status status-done">DONE</span>[Gourmet] 6. Confirmar status do componente quando tem só 1 merchant</li>
-<li><span class="issue-key">SWCONAP-4151</span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 4. Título inconsistente mais aclamados no Gourmet</li>
-<li><span class="issue-key">SWCONAP-4147</span><span class="issue-status status-done">DONE</span>[Gourmet] 3. Ajuste espaçamento componente de avaliação da pagina</li>
-<li><span class="issue-key">SWCONAP-4146</span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 2. Títulos de sessão carrossel dos chefs inconsistentes</li>
-<li><span class="issue-key">SWCONAP-4145</span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 1. Cores botões top bar inconsistentes</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>📋 Outros</span>
-        <span class="page-count">4</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/4 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4216</span><span class="issue-status status-backlog">TO DO</span>[Tela de Pedidos] Títulos de seção e espaçamento</li>
-<li><span class="issue-key">SWCONAP-4215</span><span class="issue-status status-backlog">TO DO</span>[Search UI] Espaçamentos entre componentes e inconsistência de títulos na pré-busca</li>
-<li><span class="issue-key">SWCONAP-4214</span><span class="issue-status status-backlog">TO DO</span>[Search UI] Espaçamentos entre componentes dos resultados da busca</li>
-<li><span class="issue-key">SWCONAP-4156</span><span class="issue-status status-backlog">TO DO</span>[Mercado] 5. Títulos inconsistentes - </li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>🔍 Search UI</span>
-        <span class="page-count">4</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/4 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4136</span><span class="issue-status status-backlog">TO DO</span>[Busca] 4. Espaçamentos entre categorias pré busca</li>
-<li><span class="issue-key">SWCONAP-4132</span><span class="issue-status status-backlog">TO DO</span>[Busca] 3. Componente de small banner com tipografia fora do padrão</li>
-<li><span class="issue-key">SWCONAP-4131</span><span class="issue-status status-backlog">TO DO</span>[Busca] 2. Espaçamento entre itens no Android está maior que o projetado</li>
-<li><span class="issue-key">SWCONAP-4130</span><span class="issue-status status-backlog">TO DO</span>[Busca] 1. Espaçamento entre itens no IOs está menor que o projetado</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-mercado"></span>🍺 Home de Bebidas</span>
-        <span class="page-count">4</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/4 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4050</span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Announcements fora de posição, não visível na primeira dobra</li>
-<li><span class="issue-key">SWCONAP-4037</span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento entre subcategorias fora do padrão</li>
-<li><span class="issue-key">SWCONAP-4036</span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento interno fora do padrão</li>
-<li><span class="issue-key">SWCONAP-4035</span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento fora do padrão</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>📌 Food Delivery Cross</span>
-        <span class="page-count">3</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/3 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4052</span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Espaçamento TP Premium maior que o projetado</li>
-<li><span class="issue-key">SWCONAP-4051</span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Ícones de categorias despadronizados</li>
-<li><span class="issue-key">SWCONAP-4038</span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Ícones de categorias despadronizados</li>
-</ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-mercado"></span>🔥 Hits</span>
-        <span class="page-count">1</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/1 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key">SWCONAP-4048</span><span class="issue-status status-backlog">TO DO</span>[Hits] - Hits indica - Espaçamento superior</li>
-</ul>
-    </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Tipos de Inconsistência</div>
-    <div class="type-grid">
-      <div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">↔️</div><div><div class="type-value">33</div><div class="type-label">Espaçamento / Padding</div></div></div>
-<div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔤</div><div><div class="type-value">13</div><div class="type-label">Tipografia / Cor / Peso</div></div></div>
-<div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🎨</div><div><div class="type-value">8</div><div class="type-label">Ícones</div></div></div>
-<div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">📋</div><div><div class="type-value">6</div><div class="type-label">Outros</div></div></div>
-<div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔘</div><div><div class="type-value">4</div><div class="type-label">Botão / CTA</div></div></div>
-<div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔍</div><div><div class="type-value">3</div><div class="type-label">Searchbar</div></div></div>
-<div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🧩</div><div><div class="type-value">3</div><div class="type-label">Componente fora do padrão</div></div></div>
-<div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">⭕</div><div><div class="type-value">2</div><div class="type-label">Arredondamento / Corner</div></div></div>
-<div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🏷️</div><div><div class="type-value">1</div><div class="type-label">Tags</div></div></div>
-
-    </div>
-  </div>
 
   <div class="section">
     <div class="section-title">Inconsistências por Time</div>
     <div class="page-cards">
-<div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>🏠 Home</span>
-        <span class="page-count">18</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">12/18 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:67%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4213" target="_blank">SWCONAP-4213</a></span><span class="issue-status status-backlog">TO DO</span>[Home Pet] Sub Home / Petshop</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4210" target="_blank">SWCONAP-4210</a></span><span class="issue-status status-done">DONE</span>[Home de Mercado] Arredondamento das imagens de item iconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4209" target="_blank">SWCONAP-4209</a></span><span class="issue-status status-backlog">TO DO</span>[Home] [Notifications] Espaçamento entre cards inconsistente e/ou com bug</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4208" target="_blank">SWCONAP-4208</a></span><span class="issue-status status-progress">IN PROGRESS</span>[Home] [Tabbed Ranking Carousel] Falta de borda no logo do merchant</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4191" target="_blank">SWCONAP-4191</a></span><span class="issue-status status-done">DONE</span>[Home] 6. [Home Pós Pedido] Últimas lojas com título inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4190" target="_blank">SWCONAP-4190</a></span><span class="issue-status status-backlog">TO DO</span>[Mercado] 5. [Home Pós Pedido] Títulos inconsistentes recomendação de farmácias</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4189" target="_blank">SWCONAP-4189</a></span><span class="issue-status status-done">DONE</span>[Home] 3. Espaçamento entre componente de hits e farma</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4188" target="_blank">SWCONAP-4188</a></span><span class="issue-status status-codereview">CODE REVIEW</span>3. [Home] Espaçamento entre componente de hits e farma</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4157" target="_blank">SWCONAP-4157</a></span><span class="issue-status status-done">DONE</span>6.  [Home Pós Pedido] Ultimas lojas com título inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4141" target="_blank">SWCONAP-4141</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 8. Título melhores lojas com tamanho errado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4140" target="_blank">SWCONAP-4140</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 7. Título últimas lojas com tamanho errado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4139" target="_blank">SWCONAP-4139</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 4. Espaçamento small banner maior que o esperado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4138" target="_blank">SWCONAP-4138</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 3. Espaçamento do banner errado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4137" target="_blank">SWCONAP-4137</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 6. Título componente de itens com tamanho errado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4112" target="_blank">SWCONAP-4112</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 6. Ajuste de tags componente de mercado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4111" target="_blank">SWCONAP-4111</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 3. Espaçamento entre componentes de promoção</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4110" target="_blank">SWCONAP-4110</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 7. Whitespace de mercado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4016" target="_blank">SWCONAP-4016</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Home] - Espaçamento penúltimo componente <> ranking + Tag turbo</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-farma"></span>💊 Farmácia</span>
-        <span class="page-count">13</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">1/13 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:8%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4218" target="_blank">SWCONAP-4218</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Hits - Espaçamentos inconsistentes</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4217" target="_blank">SWCONAP-4217</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Hits - Espaçamentos inconsistentes</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4212" target="_blank">SWCONAP-4212</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4211" target="_blank">SWCONAP-4211</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4155" target="_blank">SWCONAP-4155</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] 2. Searchbar em farmacia inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4154" target="_blank">SWCONAP-4154</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] 1. Top bar da página de farmacia com icones errados</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4153" target="_blank">SWCONAP-4153</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4049" target="_blank">SWCONAP-4049</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Espaçamento entre componentes fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4034" target="_blank">SWCONAP-4034</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Uso de componente antigo</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4033" target="_blank">SWCONAP-4033</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Uso de componente fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4032" target="_blank">SWCONAP-4032</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Padding da tag inferior fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4031" target="_blank">SWCONAP-4031</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Espaçamento entre componentes fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4025" target="_blank">SWCONAP-4025</a></span><span class="issue-status status-done">DONE</span>[Farmácia] - Content With Image Tile Carrousel</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-mercado"></span>🛍️ Home de Mercado</span>
-        <span class="page-count">8</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">7/8 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:88%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4194" target="_blank">SWCONAP-4194</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Android][Página do mercado] 2. TabBar em mercado inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4150" target="_blank">SWCONAP-4150</a></span><span class="issue-status status-done">DONE</span>[Android][Página do mercado] 2. Searchbar em mercado inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4149" target="_blank">SWCONAP-4149</a></span><span class="issue-status status-done">DONE</span>[Android] [Página do mercado] 1. Top bar da página de mercado com icones errados</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4128" target="_blank">SWCONAP-4128</a></span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 5. Espaçamento doces e sobremesas pg do mercado maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4127" target="_blank">SWCONAP-4127</a></span><span class="issue-status status-done">DONE</span>[Backend][Página do mercado] 4. Espaçamento peça de novo pg do mercado maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4126" target="_blank">SWCONAP-4126</a></span><span class="issue-status status-done">DONE</span>[Android][Página do mercado] 3. Espaçamento categorias pg do mercado maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4125" target="_blank">SWCONAP-4125</a></span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 2. Searchbar em mercado inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4124" target="_blank">SWCONAP-4124</a></span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 1. Top bar da página de mercado com icones errados</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-farma"></span>📋 Catalog Showcase</span>
-        <span class="page-count">7</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/7 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4129" target="_blank">SWCONAP-4129</a></span><span class="issue-status status-backlog">TO DO</span>[Página do mercado] 6. Linguetas de desconto com espaçamento inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4054" target="_blank">SWCONAP-4054</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Arredondamento de imagem e botão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4053" target="_blank">SWCONAP-4053</a></span><span class="issue-status status-backlog">TO DO</span>[Catalog Showcase] - [Item Detail] Peso e cor dos títulos</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4042" target="_blank">SWCONAP-4042</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Outline do botão e tamanho de fonte</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4041" target="_blank">SWCONAP-4041</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Icone de clube e tag</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4040" target="_blank">SWCONAP-4040</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Icone de voltar e espaçamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4039" target="_blank">SWCONAP-4039</a></span><span class="issue-status status-backlog">TO DO</span>[Catalog Showcase] - [Catálogo] Títulos fora do padrão</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>🛒 Groceries Checkout</span>
-        <span class="page-count">6</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">4/6 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:67%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4055" target="_blank">SWCONAP-4055</a></span><span class="issue-status status-backlog">TO DO</span>[Checkout] Plugin Itens - ajustar para botão secundário</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4047" target="_blank">SWCONAP-4047</a></span><span class="issue-status status-done">DONE</span>[Checkout] - Espaçamento maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4046" target="_blank">SWCONAP-4046</a></span><span class="issue-status status-backlog">TO DO</span>[Checkout] Arredondamento das imagens - cross sell</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4045" target="_blank">SWCONAP-4045</a></span><span class="issue-status status-done">DONE</span>[Checkout] - Ajustar arredondamento lista de DMs</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4044" target="_blank">SWCONAP-4044</a></span><span class="issue-status status-done">DONE</span>[Checkout] - Botão de voltar</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4043" target="_blank">SWCONAP-4043</a></span><span class="issue-status status-done">DONE</span>[Checkout] - Botão de voltar</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-farma"></span>🍽️ Gourmet</span>
-        <span class="page-count">5</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">2/5 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:40%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4152" target="_blank">SWCONAP-4152</a></span><span class="issue-status status-done">DONE</span>[Gourmet] 6. Confirmar status do componente quando tem só 1 merchant</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4151" target="_blank">SWCONAP-4151</a></span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 4. Título inconsistente mais aclamados no Gourmet</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4147" target="_blank">SWCONAP-4147</a></span><span class="issue-status status-done">DONE</span>[Gourmet] 3. Ajuste espaçamento componente de avaliação da pagina</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4146" target="_blank">SWCONAP-4146</a></span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 2. Títulos de sessão carrossel dos chefs inconsistentes</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4145" target="_blank">SWCONAP-4145</a></span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 1. Cores botões top bar inconsistentes</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>📋 Outros</span>
-        <span class="page-count">4</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">1/4 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:25%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4216" target="_blank">SWCONAP-4216</a></span><span class="issue-status status-backlog">TO DO</span>[Tela de Pedidos] Títulos de seção e espaçamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4215" target="_blank">SWCONAP-4215</a></span><span class="issue-status status-backlog">TO DO</span>[Search UI] Espaçamentos entre componentes e inconsistência de títulos na pré-busca</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4214" target="_blank">SWCONAP-4214</a></span><span class="issue-status status-backlog">TO DO</span>[Search UI] Espaçamentos entre componentes dos resultados da busca</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4156" target="_blank">SWCONAP-4156</a></span><span class="issue-status status-done">DONE</span>[Mercado] 5. Títulos inconsistentes - </li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>🔍 Search UI</span>
-        <span class="page-count">4</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/4 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4136" target="_blank">SWCONAP-4136</a></span><span class="issue-status status-backlog">TO DO</span>[Busca] 4. Espaçamentos entre categorias pré busca</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4132" target="_blank">SWCONAP-4132</a></span><span class="issue-status status-backlog">TO DO</span>[Busca] 3. Componente de small banner com tipografia fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4131" target="_blank">SWCONAP-4131</a></span><span class="issue-status status-backlog">TO DO</span>[Busca] 2. Espaçamento entre itens no Android está maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4130" target="_blank">SWCONAP-4130</a></span><span class="issue-status status-backlog">TO DO</span>[Busca] 1. Espaçamento entre itens no IOs está menor que o projetado</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-mercado"></span>🍺 Home de Bebidas</span>
-        <span class="page-count">4</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">1/4 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:25%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4050" target="_blank">SWCONAP-4050</a></span><span class="issue-status status-done">DONE</span>[Bebidas] - Announcements fora de posição, não visível na primeira dobra</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4037" target="_blank">SWCONAP-4037</a></span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento entre subcategorias fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4036" target="_blank">SWCONAP-4036</a></span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento interno fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4035" target="_blank">SWCONAP-4035</a></span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento fora do padrão</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-home"></span>📌 Food Delivery Cross</span>
-        <span class="page-count">3</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/3 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4052" target="_blank">SWCONAP-4052</a></span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Espaçamento TP Premium maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4051" target="_blank">SWCONAP-4051</a></span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Ícones de categorias despadronizados</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4038" target="_blank">SWCONAP-4038</a></span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Ícones de categorias despadronizados</li></ul>
-    </div><div class="page-card">
-      <div class="page-card-header">
-        <span class="page-card-name"><span class="page-dot page-dot-mercado"></span>🔥 Hits</span>
-        <span class="page-count">1</span>
-      </div>
-      <div style="font-size:0.8rem;color:var(--text-secondary);">0/1 resolvidas</div>
-      <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:var(--green);"></div></div>
-      <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4048" target="_blank">SWCONAP-4048</a></span><span class="issue-status status-backlog">TO DO</span>[Hits] - Hits indica - Espaçamento superior</li></ul>
-    </div>    </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-home"></span> 🏠 Home</span>
+            <span class="page-count">12</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">8/12 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:67%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4016" target="_blank">SWCONAP-4016</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Home] - Espaçamento penúltimo componente &lt;&gt; ranking + Tag turbo</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4046" target="_blank">SWCONAP-4046</a></span><span class="issue-status status-backlog">TO DO</span>[Checkout] Arredondamento das imagens - cross sell</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4137" target="_blank">SWCONAP-4137</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 6. Título componente de itens com tamanho errado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4138" target="_blank">SWCONAP-4138</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 3. Espaçamento do banner errado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4139" target="_blank">SWCONAP-4139</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 4. Espaçamento small banner maior que o esperado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4140" target="_blank">SWCONAP-4140</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 7. Título últimas lojas com tamanho errado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4141" target="_blank">SWCONAP-4141</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Food] 8. Título melhores lojas com tamanho errado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4157" target="_blank">SWCONAP-4157</a></span><span class="issue-status status-done">DONE</span>6.  [Home Pós Pedido] Ultimas lojas com título inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4188" target="_blank">SWCONAP-4188</a></span><span class="issue-status status-codereview">CODE REVIEW</span>3. [Home] Espaçamento entre componente de hits e farma</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4189" target="_blank">SWCONAP-4189</a></span><span class="issue-status status-done">DONE</span>[Home] 3. Espaçamento entre componente de hits e farma</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4191" target="_blank">SWCONAP-4191</a></span><span class="issue-status status-done">DONE</span>[Home] 6. [Home Pós Pedido] Últimas lojas com título inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4208" target="_blank">SWCONAP-4208</a></span><span class="issue-status status-progress">IN PROGRESS</span>[Home] [Tabbed Ranking Carousel] Falta de borda no logo do merchant</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-farma"></span> 💊 Farmácia</span>
+            <span class="page-count">14</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">1/14 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:7%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4025" target="_blank">SWCONAP-4025</a></span><span class="issue-status status-done">DONE</span>[Farmácia] - Content With Image Tile Carrousel</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4031" target="_blank">SWCONAP-4031</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Espaçamento entre componentes fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4032" target="_blank">SWCONAP-4032</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Padding da tag inferior fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4033" target="_blank">SWCONAP-4033</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Uso de componente fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4034" target="_blank">SWCONAP-4034</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Uso de componente antigo</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4049" target="_blank">SWCONAP-4049</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] - Espaçamento entre componentes fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4153" target="_blank">SWCONAP-4153</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4154" target="_blank">SWCONAP-4154</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] 1. Top bar da página de farmacia com icones errados</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4155" target="_blank">SWCONAP-4155</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] 2. Searchbar em farmacia inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4190" target="_blank">SWCONAP-4190</a></span><span class="issue-status status-backlog">TO DO</span>[Mercado] 5. [Home Pós Pedido] Títulos inconsistentes recomendação de farmácias</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4211" target="_blank">SWCONAP-4211</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4212" target="_blank">SWCONAP-4212</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Espaçamento entre banners e arredondamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4217" target="_blank">SWCONAP-4217</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Hits - Espaçamentos inconsistentes</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4218" target="_blank">SWCONAP-4218</a></span><span class="issue-status status-backlog">TO DO</span>[Farmácia] Hits - Espaçamentos inconsistentes</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-mercado"></span> 🍺 Home de Bebidas</span>
+            <span class="page-count">5</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">1/5 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:20%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4035" target="_blank">SWCONAP-4035</a></span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4036" target="_blank">SWCONAP-4036</a></span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento interno fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4037" target="_blank">SWCONAP-4037</a></span><span class="issue-status status-backlog">TO DO</span>[Bebidas] - Espaçamento entre subcategorias fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4050" target="_blank">SWCONAP-4050</a></span><span class="issue-status status-done">DONE</span>[Bebidas] - Announcements fora de posição, não visível na primeira dobra</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4213" target="_blank">SWCONAP-4213</a></span><span class="issue-status status-backlog">TO DO</span>[Home Pet] Sub Home / Petshop</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-home"></span> 🛒 Groceries Checkout</span>
+            <span class="page-count">1</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">1/1 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:100%;background:#00c853;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4043" target="_blank">SWCONAP-4043</a></span><span class="issue-status status-done">DONE</span>[Checkout] - Botão de voltar</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-farma"></span> 📋 Catalog Showcase</span>
+            <span class="page-count">2</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">0/2 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4039" target="_blank">SWCONAP-4039</a></span><span class="issue-status status-backlog">TO DO</span>[Catalog Showcase] - [Catálogo] Títulos fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4129" target="_blank">SWCONAP-4129</a></span><span class="issue-status status-backlog">TO DO</span>[Página do mercado] 6. Linguetas de desconto com espaçamento inconsistente</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-home"></span> 📌 Food Delivery Cross</span>
+            <span class="page-count">8</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">2/8 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:25%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4038" target="_blank">SWCONAP-4038</a></span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Ícones de categorias despadronizados</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4040" target="_blank">SWCONAP-4040</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Icone de voltar e espaçamento</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4041" target="_blank">SWCONAP-4041</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Catalog Showcase] - [Item Detail] Icone de clube e tag</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4042" target="_blank">SWCONAP-4042</a></span><span class="issue-status status-done">DONE</span>[Catalog Showcase] - [Item Detail] Outline do botão e tamanho de fonte</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4051" target="_blank">SWCONAP-4051</a></span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Ícones de categorias despadronizados</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4052" target="_blank">SWCONAP-4052</a></span><span class="issue-status status-backlog">TO DO</span>[Subhome/Food] - Espaçamento TP Premium maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4053" target="_blank">SWCONAP-4053</a></span><span class="issue-status status-backlog">TO DO</span>[Catalog Showcase] - [Item Detail] Peso e cor dos títulos</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4054" target="_blank">SWCONAP-4054</a></span><span class="issue-status status-done">DONE</span>[Catalog Showcase] - [Item Detail] Arredondamento de imagem e botão</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-mercado"></span> 🔥 Hits</span>
+            <span class="page-count">1</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">0/1 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4048" target="_blank">SWCONAP-4048</a></span><span class="issue-status status-backlog">TO DO</span>[Hits] - Hits indica - Espaçamento superior</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-mercado"></span> 🛍️ Home de Mercado</span>
+            <span class="page-count">13</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">12/13 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:92%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4110" target="_blank">SWCONAP-4110</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 7. Whitespace de mercado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4111" target="_blank">SWCONAP-4111</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 3. Espaçamento entre componentes de promoção</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4112" target="_blank">SWCONAP-4112</a></span><span class="issue-status status-done">DONE</span>[Sub Home / Mercado] 6. Ajuste de tags componente de mercado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4124" target="_blank">SWCONAP-4124</a></span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 1. Top bar da página de mercado com icones errados</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4125" target="_blank">SWCONAP-4125</a></span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 2. Searchbar em mercado inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4126" target="_blank">SWCONAP-4126</a></span><span class="issue-status status-done">DONE</span>[Android][Página do mercado] 3. Espaçamento categorias pg do mercado maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4127" target="_blank">SWCONAP-4127</a></span><span class="issue-status status-done">DONE</span>[Backend][Página do mercado] 4. Espaçamento peça de novo pg do mercado maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4128" target="_blank">SWCONAP-4128</a></span><span class="issue-status status-done">DONE</span>[iOS][Página do mercado] 5. Espaçamento doces e sobremesas pg do mercado maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4149" target="_blank">SWCONAP-4149</a></span><span class="issue-status status-done">DONE</span>[Android] [Página do mercado] 1. Top bar da página de mercado com icones errados</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4150" target="_blank">SWCONAP-4150</a></span><span class="issue-status status-done">DONE</span>[Android][Página do mercado] 2. Searchbar em mercado inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4156" target="_blank">SWCONAP-4156</a></span><span class="issue-status status-done">DONE</span>[Mercado] 5. Títulos inconsistentes - </li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4194" target="_blank">SWCONAP-4194</a></span><span class="issue-status status-codereview">CODE REVIEW</span>[Android][Página do mercado] 2. TabBar em mercado inconsistente</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4210" target="_blank">SWCONAP-4210</a></span><span class="issue-status status-done">DONE</span>[Home de Mercado] Arredondamento das imagens de item iconsistente</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-mercado"></span> 🔍 Search UI</span>
+            <span class="page-count">6</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">0/6 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4130" target="_blank">SWCONAP-4130</a></span><span class="issue-status status-backlog">TO DO</span>[Busca] 1. Espaçamento entre itens no IOs está menor que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4131" target="_blank">SWCONAP-4131</a></span><span class="issue-status status-backlog">TO DO</span>[Busca] 2. Espaçamento entre itens no Android está maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4132" target="_blank">SWCONAP-4132</a></span><span class="issue-status status-backlog">TO DO</span>[Busca] 3. Componente de small banner com tipografia fora do padrão</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4136" target="_blank">SWCONAP-4136</a></span><span class="issue-status status-backlog">TO DO</span>[Busca] 4. Espaçamentos entre categorias pré busca</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4214" target="_blank">SWCONAP-4214</a></span><span class="issue-status status-backlog">TO DO</span>[Search UI] Espaçamentos entre componentes dos resultados da busca</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4215" target="_blank">SWCONAP-4215</a></span><span class="issue-status status-backlog">TO DO</span>[Search UI] Espaçamentos entre componentes e inconsistência de títulos na pré-busca</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-home"></span> 🍽️ Gourmet</span>
+            <span class="page-count">5</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">2/5 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:40%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4145" target="_blank">SWCONAP-4145</a></span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 1. Cores botões top bar inconsistentes</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4146" target="_blank">SWCONAP-4146</a></span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 2. Títulos de sessão carrossel dos chefs inconsistentes</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4147" target="_blank">SWCONAP-4147</a></span><span class="issue-status status-done">DONE</span>[Gourmet] 3. Ajuste espaçamento componente de avaliação da pagina</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4151" target="_blank">SWCONAP-4151</a></span><span class="issue-status status-backlog">TO DO</span>[Gourmet] 4. Título inconsistente mais aclamados no Gourmet</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4152" target="_blank">SWCONAP-4152</a></span><span class="issue-status status-done">DONE</span>[Gourmet] 6. Confirmar status do componente quando tem só 1 merchant</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-farma"></span> 📦 Post Order Experience</span>
+            <span class="page-count">1</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">0/1 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4216" target="_blank">SWCONAP-4216</a></span><span class="issue-status status-backlog">TO DO</span>[Tela de Pedidos] Títulos de seção e espaçamento</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-mercado"></span> 📱 Martech</span>
+            <span class="page-count">1</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">0/1 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:0%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4209" target="_blank">SWCONAP-4209</a></span><span class="issue-status status-backlog">TO DO</span>[Home] [Notifications] Espaçamento entre cards inconsistente e/ou com bug</li></ul>
+        </div>
+        <div class="page-card">
+          <div class="page-card-header">
+            <span class="page-card-name"><span class="page-dot page-dot-home"></span> 🛒 Pre Order Cart Experience</span>
+            <span class="page-count">4</span>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-secondary);">3/4 resolvidas</div>
+          <div class="page-bar-bg"><div class="page-bar-fill" style="width:75%;background:#4d7cff;"></div></div>
+          <ul class="page-issues"><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4044" target="_blank">SWCONAP-4044</a></span><span class="issue-status status-done">DONE</span>[Checkout] - Botão de voltar</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4045" target="_blank">SWCONAP-4045</a></span><span class="issue-status status-done">DONE</span>[Checkout] - Ajustar arredondamento lista de DMs</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4047" target="_blank">SWCONAP-4047</a></span><span class="issue-status status-done">DONE</span>[Checkout] - Espaçamento maior que o projetado</li><li><span class="issue-key"><a href="https://ifood.atlassian.net/browse/SWCONAP-4055" target="_blank">SWCONAP-4055</a></span><span class="issue-status status-backlog">TO DO</span>[Checkout] Plugin Itens - ajustar para botão secundário</li></ul>
+        </div>
+    </div>
   </div>
 
   <div class="section">
     <div class="section-title">Tipos de Inconsistência</div>
     <div class="type-grid">
-      <div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">↔️</div><div><div class="type-value">33</div><div class="type-label">Espaçamento / Padding</div></div></div><div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔤</div><div><div class="type-value">13</div><div class="type-label">Tipografia / Cor / Peso</div></div></div><div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🎨</div><div><div class="type-value">8</div><div class="type-label">Ícones</div></div></div><div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">📋</div><div><div class="type-value">6</div><div class="type-label">Outros</div></div></div><div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔘</div><div><div class="type-value">4</div><div class="type-label">Botão / CTA</div></div></div><div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔍</div><div><div class="type-value">3</div><div class="type-label">Searchbar</div></div></div><div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🧩</div><div><div class="type-value">3</div><div class="type-label">Componente fora do padrão</div></div></div><div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">⭕</div><div><div class="type-value">2</div><div class="type-label">Arredondamento / Corner</div></div></div><div class="type-card"><div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🏷️</div><div><div class="type-value">1</div><div class="type-label">Tags</div></div></div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--orange-bg);color:var(--orange);">↔️</div>
+          <div><div class="type-value">37</div><div class="type-label">Espaçamento / Padding</div></div>
+        </div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--teal-bg);color:var(--teal);">🔤</div>
+          <div><div class="type-value">11</div><div class="type-label">Tipografia / Cor / Peso</div></div>
+        </div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🎨</div>
+          <div><div class="type-value">9</div><div class="type-label">Ícones</div></div>
+        </div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">📋</div>
+          <div><div class="type-value">5</div><div class="type-label">Outros</div></div>
+        </div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--yellow-bg);color:var(--yellow);">🔘</div>
+          <div><div class="type-value">4</div><div class="type-label">Botão / CTA</div></div>
+        </div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--blue-bg);color:var(--blue);">🔍</div>
+          <div><div class="type-value">3</div><div class="type-label">Searchbar</div></div>
+        </div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--red-bg);color:var(--red);">⭕</div>
+          <div><div class="type-value">2</div><div class="type-label">Arredondamento / Corner</div></div>
+        </div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--yellow-bg);color:var(--yellow);">🏷️</div>
+          <div><div class="type-value">1</div><div class="type-label">Tags</div></div>
+        </div>
+        <div class="type-card">
+          <div class="type-icon" style="background:var(--purple-bg);color:var(--purple);">🧩</div>
+          <div><div class="type-value">1</div><div class="type-label">Componente fora do padrão</div></div>
+        </div>
     </div>
   </div>
 
@@ -470,17 +355,17 @@
         <div class="progress-ring-wrap">
           <svg class="progress-ring" viewBox="0 0 120 120">
             <circle cx="60" cy="60" r="52" fill="none" stroke="var(--border)" stroke-width="12"/>
-            <circle cx="60" cy="60" r="52" fill="none" stroke="#ea2845" stroke-width="12"
-              stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="202.6"
+            <circle cx="60" cy="60" r="52" fill="none" stroke="#ffb300" stroke-width="12"
+              stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="192.8"
               transform="rotate(-90 60 60)" />
-            <text x="60" y="56" text-anchor="middle">38%</text>
+            <text x="60" y="56" text-anchor="middle">41%</text>
             <text x="60" y="74" text-anchor="middle" font-size="0.6rem" fill="#8b8fa8" font-weight="500">concluído</text>
           </svg>
           <div class="progress-details" style="font-size:0.85rem;">
-            <span><strong>73</strong> abertas</span>
-            <span><strong>7</strong> em code review</span>
+            <span><strong>37</strong> abertas</span>
             <span><strong>1</strong> em progresso</span>
-            <span><strong>28</strong> concluídas</span>
+            <span><strong>5</strong> em code review</span>
+            <span><strong>30</strong> concluídas</span>
           </div>
         </div>
       </div>
@@ -488,7 +373,7 @@
   </div>
 
   <div class="footer">
-    <span>Atualizado automaticamente a cada 12h · Dados do Jira (ifood.atlassian.net) + Figma</span>
+    <span>Atualizado a cada refresh · Dados do Jira (ifood.atlassian.net) + Figma</span>
     <span>Projeto SWCONAP · Board #4479</span>
   </div>
 </div>
